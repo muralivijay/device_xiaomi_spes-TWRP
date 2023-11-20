@@ -22,7 +22,7 @@ AB_OTA_PARTITIONS += \
     recovery \
     vbmeta \
     vbmeta_system \
-    vbmeta_vendor\
+    vbmeta_vendor \
     vendor_boot
 
 # Architecture
