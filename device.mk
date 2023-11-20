@@ -29,6 +29,17 @@ PRODUCT_PACKAGES += \
     qcom_decrypt \
     qcom_decrypt_fbe
 
+# Dynamic
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Fastboot HAL
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock \
+
+# Fastbootd HAL
+PRODUCT_PACKAGES += \
+    fastbootd
+
 # Recovery Modules
 TARGET_RECOVERY_DEVICE_MODULES += \
     android.hidl.allocator@1.0 \
