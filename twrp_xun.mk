@@ -18,12 +18,12 @@ $(call inherit-product, device/xiaomi/xun/device.mk)
 PRODUCT_DEVICE := xun
 PRODUCT_NAME := twrp_xun
 PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := xun
+PRODUCT_MODEL := Redmi Pad SE
 PRODUCT_MANUFACTURER := xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="xun_global-user 13 TKQ1.221114.001 V14.0.2.0.TMUTWXM release-keys"
+    PRIVATE_BUILD_DESC="xun-user 13 TKQ1.221114.001 V14.0.2.0.TMUTWXM release-keys"
 
-BUILD_FINGERPRINT := Redmi/xun_global/xun:13/TKQ1.221114.001/V14.0.2.0.TMUTWXM:user/release-keys
+BUILD_FINGERPRINT := Redmi/xun/xun:13/TKQ1.221114.001/V14.0.2.0.TMUTWXM:user/release-keys

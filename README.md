@@ -1,4 +1,13 @@
-# Android device tree for Redmi xun (xun)
+# Custom Recovery Tree
+Build your own custom recovery for Redmi Pad SE (aka xun).
+
+![XUN](https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-pad-se-10.jpg)
+
+# Features
+Soon to be edited...
+
+# Notes
+Soon to be edited...
 
 ```
 #
