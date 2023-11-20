@@ -13,19 +13,16 @@ AB_OTA_POSTINSTALL_CONFIG += \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
 
-# Boot control HAL
+# Boot Control HAL
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service
+    android.hardware.boot@1.2-impl-qti \
+    android.hardware.boot@1.2-impl-qti.recovery \
+    android.hardware.boot@1.2-service
 
+# Health HAL
 PRODUCT_PACKAGES += \
-    bootctrl.bengal
-
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.bengal \
-    libgptutils \
-    libz \
-    libcutils
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
