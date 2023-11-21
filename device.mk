@@ -43,9 +43,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fastbootd
 
-# Override
-TW_OVERRIDE_SYSTEM_PROPS := "ro.vndk.version;ro.vendor.build.version.sdk;ro.build.version.sdk;ro.board.api_level;ro.product.first_api_level;ro.board.first_api_level"
-
 # Recovery Modules
 TARGET_RECOVERY_DEVICE_MODULES += \
     android.hidl.allocator@1.0 \
