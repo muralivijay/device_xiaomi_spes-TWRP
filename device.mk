@@ -14,11 +14,7 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_OPTIONAL_system=true
 
 # API/SDK Level
-PRODUCT_SHIPPING_API_LEVEL := 33
-BOARD_SHIPPING_API_LEVEL := 33
-BOARD_API_LEVEL := 33
-SHIPPING_API_LEVEL := 33
-BOARD_SYSTEMSDK_VERSIONS := 33
+PRODUCT_SHIPPING_API_LEVEL := 32
 
 # Boot Control HAL
 PRODUCT_PACKAGES += \
@@ -46,6 +42,9 @@ PRODUCT_PACKAGES += \
 # Fastbootd HAL
 PRODUCT_PACKAGES += \
     fastbootd
+
+# Override
+TW_OVERRIDE_SYSTEM_PROPS := "ro.vndk.version;ro.vendor.build.version.sdk;ro.build.version.sdk;ro.board.api_level;ro.product.first_api_level;ro.board.first_api_level"
 
 # Recovery Modules
 TARGET_RECOVERY_DEVICE_MODULES += \
