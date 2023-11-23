@@ -4,10 +4,15 @@ Build your own custom recovery for Redmi Pad SE (aka xun).
 ![XUN](https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-pad-se-10.jpg)
 
 # Features
-Soon to be edited...
+- [X] Internal Storage (Decryption works)
+- [X] External Storage (OTG and MicroSD)
+- [X] ADB and MTP
+- [ ] Touchscreen
+- [ ] Vibration
+- [ ] Backup and Restore
 
 # Notes
-Soon to be edited...
+Since touchscreen does not work, using OTG Mouse is the only way to use it.
 
 ```
 #
