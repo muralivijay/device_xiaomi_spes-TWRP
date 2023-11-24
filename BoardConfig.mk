@@ -129,6 +129,7 @@ TW_NO_SCREEN_BLANK := true
 TW_INCLUDE_FUSE_EXFAT := true
 TW_SKIP_ADDITIONAL_FSTAB := true
 TW_LOAD_VENDOR_MODULES  += "adsp_loader_dlkm.ko"
+TW_ROTATION := 270
 
 # Version
 TW_DEVICE_VERSION := Crypton
