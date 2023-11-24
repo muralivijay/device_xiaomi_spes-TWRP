@@ -8,8 +8,8 @@ Build your own custom recovery for Redmi Pad SE (aka xun).
 - [X] External Storage (OTG and MicroSD)
 - [X] ADB and MTP
 - [X] Touchscreen
-- [ ] Vibration
-- [ ] Backup and Restore
+- [X] Vibration (does not have)
+- [X] Backup and Restore
 
 # Notes
 Tell me
