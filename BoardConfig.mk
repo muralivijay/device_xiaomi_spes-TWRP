@@ -131,7 +131,7 @@ TW_NO_SCREEN_BLANK := true
 TW_INCLUDE_FUSE_EXFAT := true
 TW_SKIP_ADDITIONAL_FSTAB := true
 TW_LOAD_VENDOR_MODULES  += "adsp_loader_dlkm.ko focaltech_ts_spi.ko nt36532_spi.ko qti_battery_charger.ko camera.ko"
-TW_ROTATION := 270
+TW_ROTATION := 180
 
 # Version
 TW_DEVICE_VERSION := Gowther
