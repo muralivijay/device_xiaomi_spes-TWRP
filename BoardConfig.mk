@@ -53,8 +53,11 @@ BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_USES_GENERIC_KERNEL_IMAGE := true
 BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+TARGET_KERNEL_CLANG_COMPILE   := true
+TARGET_PREBUILT_KERNEL        := /dev/null # empty kernel image
 
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
@@ -63,11 +66,7 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.usbcontroller=4e00000.dwc3 \
     androidboot.selinux=permissive
 
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CONFIG := vendor/spes-perf_defconfig
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6225
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_LINUX_KERNEL_VERSION := 4.19
+# Ramdisk
 BOARD_RAMDISK_USE_LZ4 := true
 
 # Metadata
