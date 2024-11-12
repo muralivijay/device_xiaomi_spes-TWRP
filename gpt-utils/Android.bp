@@ -26,7 +26,7 @@ cc_library {
     name: "libgptutils.spes",
     vendor: true,
     recovery_available: true,
-    defaults: ["libion_header_paths" ,"ufsbsg_defaults"],
+    defaults: ["ufsbsg_defaults"],
     srcs: [
         "gpt-utils.cpp",
         "recovery-ufs-bsg.cpp",
