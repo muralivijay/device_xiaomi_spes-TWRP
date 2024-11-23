@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/xun
+DEVICE_PATH := device/xiaomi/spes
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
@@ -19,7 +19,6 @@ AB_OTA_PARTITIONS += \
     product \
     odm \
     boot \
-    recovery \
     vbmeta \
     vbmeta_system \
     vbmeta_vendor \
@@ -58,17 +57,26 @@ TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 
 # Display
-TARGET_SCREEN_HEIGHT  := 1920
+TARGET_SCREEN_HEIGHT  := 2400
 TARGET_SCREEN_DENSITY := 390
-TARGET_SCREEN_WIDTH   := 1200
+TARGET_SCREEN_WIDTH   := 1080
+
+# GSI && GKI
+BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
+
+# Despite being VA/B device, there is a dedicated recovery partition
+BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
+BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 4
-BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE := true
 BOARD_RAMDISK_USE_LZ4 := true
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel # Dummy prebuilt kernel
 TARGET_NO_KERNEL_OVERRIDE := true
+BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -97,7 +105,6 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-BOARD_HAS_FLIPPED_SCREEN := true
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
@@ -118,20 +125,20 @@ PLATFORM_SECURITY_PATCH := 2099-12-31
 VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # TWRP Configuration
-TW_THEME := landscape_hdpi
+TW_THEME := portrait_hdpi
 TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_REPACKTOOLS := true
 TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_NTFS_3G := true
-TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
+TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
 TW_DEFAULT_BRIGHTNESS := 900
 TW_NO_SCREEN_BLANK := true
 TW_INCLUDE_FUSE_EXFAT := true
 TW_SKIP_ADDITIONAL_FSTAB := true
-TW_LOAD_VENDOR_MODULES  += "adsp_loader_dlkm.ko focaltech_ts_spi.ko nt36532_spi.ko qti_battery_charger.ko camera.ko"
-TW_ROTATION := 180
+TW_LOAD_VENDOR_BOOT_MODULES := true
+TW_NO_FLASH_CURRENT_TWRP := true
 
 # Version
-TW_DEVICE_VERSION := Gowther
+TW_DEVICE_VERSION := Murali

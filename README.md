@@ -1,7 +1,7 @@
 # Custom Recovery Tree
-Build your own custom recovery for Redmi Pad SE (aka xun).
+Build your own custom recovery for Redmi Note 11 (aka spes/spesn).
 
-![XUN](https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-pad-se-10.jpg)
+![spes/spesn](https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note-11-global-1.jpg)
 
 # Features
 - [X] Internal Storage (Decryption works)

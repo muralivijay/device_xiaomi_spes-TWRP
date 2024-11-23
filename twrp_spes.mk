@@ -12,13 +12,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit some common twrp stuff.
 $(call inherit-product, vendor/twrp/config/common.mk)
 
-# Inherit from xun device
-$(call inherit-product, device/xiaomi/xun/device.mk)
+# Inherit from spes device
+$(call inherit-product, device/xiaomi/spes/device.mk)
 
-PRODUCT_DEVICE := xun
-PRODUCT_NAME := twrp_xun
+PRODUCT_DEVICE := spes
+PRODUCT_NAME := twrp_spes
 PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := Redmi Pad SE
+PRODUCT_MODEL := Redmi Note 11
 PRODUCT_MANUFACTURER := xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
