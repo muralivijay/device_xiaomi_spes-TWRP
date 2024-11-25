@@ -18,3 +18,6 @@ vendor.usb.use_ffs_mtp=1
 # Virtual A/B
 ro.virtual_ab.userspace.snapshots.enabled=true
 ro.virtual_ab.io_uring.enabled=true
+
+# keymaster
+keymaster_ver=4.1
