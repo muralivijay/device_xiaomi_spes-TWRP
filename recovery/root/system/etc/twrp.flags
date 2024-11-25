@@ -1,6 +1,5 @@
 # Booting-related Partitions
 /boot               emmc      /dev/block/bootdevice/by-name/boot             flags=display="Boot";slotselect;flashimg=1
-/recovery           emmc      /dev/block/bootdevice/by-name/recovery         flags=display="Recovery";slotselect;backup=1;flashimg=1
 /dtbo               emmc      /dev/block/bootdevice/by-name/dtbo             flags=display="DTBO";slotselect;backup=1;flashimg=1
 /vendor_boot        emmc     /dev/block/bootdevice/by-name/vendor_boot                           flags=slotselect;display="Vendor Boot";backup=1;flashimg=1
 
